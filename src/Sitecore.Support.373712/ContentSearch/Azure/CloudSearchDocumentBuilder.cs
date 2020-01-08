@@ -20,10 +20,9 @@
             try
             {
                 VerboseLogging.CrawlingLogDebug(() => "AddItemFields start");
-                if (Options.IndexAllFields)
-                {
-                    Indexable.LoadAllFields();
-                }
+
+                Indexable.LoadAllFields();
+
                 if (IsParallel)
                 {
                     ConcurrentQueue<Exception> exceptions = new ConcurrentQueue<Exception>();
